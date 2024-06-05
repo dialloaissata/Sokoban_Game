@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet SOKOBAN:  Fichier source de include/player.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet SOKOBAN
+   </div>
+   <div id="projectbrief">Sokoban est un jeu vidéo de réflexion inventé au Japon. le joueur doit ranger des caisses sur des cases cibles. Il peut se déplacer dans les quatre directions, et pousser une seule caisse à la fois. Une fois toutes les caisses rangées le niveau est réussi (source: wikipedia)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">player.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="player_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef PLAYER_HEADER</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define PLAYER_HEADER</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="grid_8h.html">grid.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="player_8h.html#a1bf1ce545fef5551da2943b13738659a">Direction</a> <a class="code" href="player_8h.html#a1bf1ce545fef5551da2943b13738659a">Direction</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="player_8h.html#a1bf1ce545fef5551da2943b13738659a">   21</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="player_8h.html#a1bf1ce545fef5551da2943b13738659a">Direction</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Top = <span class="charliteral">&#39;k&#39;</span>,          <span class="comment">// Haut</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Left = <span class="charliteral">&#39;h&#39;</span>,         <span class="comment">// Gauche</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Right = <span class="charliteral">&#39;l&#39;</span>,        <span class="comment">// Droite</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Bottom = <span class="charliteral">&#39;j&#39;</span>        <span class="comment">// Bas</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structPlayer.html">   33</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structPlayer.html">Player</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> x; <span class="comment">// Deplacement horizontale</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> y; <span class="comment">// Deplacement Vertical</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <a class="code" href="structPlayer.html">Player</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">struct </span><a class="code" href="structGrid.html">Grid</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="player_8h.html#a7b0e9871171b358a228417364d48d148">move_player</a>(<span class="keyword">enum</span> <a class="code" href="player_8h.html#a1bf1ce545fef5551da2943b13738659a">Direction</a> direction, <span class="keyword">struct</span> <a class="code" href="structGrid.html">Grid</a> *maGrid);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//typedef int bool;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">int</span> <a class="code" href="player_8h.html#af05e7821066608dd6261ce859917206f">toutesLesCiblesRecouvertes</a>(<span class="keyword">struct</span> <a class="code" href="structGrid.html">Grid</a> *maGrid);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agrid_8h_html"><div class="ttname"><a href="grid_8h.html">grid.h</a></div><div class="ttdoc">Contient enum caseType et la structure Grid ainsi que les prototypes de fonctions.</div></div>
+<div class="ttc" id="aplayer_8h_html_a1bf1ce545fef5551da2943b13738659a"><div class="ttname"><a href="player_8h.html#a1bf1ce545fef5551da2943b13738659a">Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Cette structure contient les informations concernant le déplacement du joueur &quot;dans notre cas '@&quot; k: ...</div><div class="ttdef"><b>Definition:</b> player.h:22</div></div>
+<div class="ttc" id="aplayer_8h_html_a7b0e9871171b358a228417364d48d148"><div class="ttname"><a href="player_8h.html#a7b0e9871171b358a228417364d48d148">move_player</a></div><div class="ttdeci">void move_player(enum Direction direction, struct Grid *maGrid)</div><div class="ttdoc">Fonction qui permet de deplacer le joueur dans la grille de jeu.</div><div class="ttdef"><b>Definition:</b> player.c:18</div></div>
+<div class="ttc" id="aplayer_8h_html_af05e7821066608dd6261ce859917206f"><div class="ttname"><a href="player_8h.html#af05e7821066608dd6261ce859917206f">toutesLesCiblesRecouvertes</a></div><div class="ttdeci">int toutesLesCiblesRecouvertes(struct Grid *maGrid)</div><div class="ttdoc">Fonction qui retourne si toutes les cibles sont recouvertes.</div><div class="ttdef"><b>Definition:</b> player.c:171</div></div>
+<div class="ttc" id="astructGrid_html"><div class="ttname"><a href="structGrid.html">Grid</a></div><div class="ttdoc">Cette structure contient les informations concernant la grille du jeu et son contenu.</div><div class="ttdef"><b>Definition:</b> grid.h:40</div></div>
+<div class="ttc" id="astructPlayer_html"><div class="ttname"><a href="structPlayer.html">Player</a></div><div class="ttdoc">Cette structure contient les differentes positions du joueur dans le repere.</div><div class="ttdef"><b>Definition:</b> player.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
